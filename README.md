@@ -9,7 +9,7 @@ This project predicts Graduate (1) vs Dropout (0) on the UCI "Predict Studentsâ€
 ## Project Structure
 
 - `student_dropout_fairness.ipynb`: EDA, bias audit, models, mitigations, evaluation
-- `data.csv`: Dataset (see Data section)
+- `data.csv`: Dataset (UCI "Predict Studentsâ€™ Dropout and Academic Success")
 - `metrics_comparison.csv`: Metrics summary saved by the notebook
 - `requirements.txt`: Python dependencies
 - `Dockerfile`: JupyterLab container for reproducibility
@@ -150,19 +150,17 @@ The notebook also visualizes confusion matrices, ROC curves, and subgroup tables
 - Tsewang Namgail (241110093)
 
   - Data exploration and bias evaluation
-  - Implementation of mitigation B (Reweighting) and mitigation C (Calibration) (50%)
+  - Implementation of mitigation B (Reweighting) and mitigation C (Calibration)
   - Evaluation and results analysis (50%)
   - README and code documentation
 
 - Sevak Shekokar (241110065)
 
   - Data exploration and bias evaluation
-  - Implementation of baseline model and mitigation A (Drop Gender) (50%)
-  - Evaluation and results analysis (50%)
+  - Implementation of baseline model and mitigation A (Drop Gender)
+  - Evaluation and results analysis
   - Dockerfile and code documentation
 
 Both Tsewang Namgail and Sevak Shekokar has contributed equally across the major components of the project, collaborating on data analysis, modeling, fairness mitigations, evaluation, and documentation.
-
----
 
 ---
