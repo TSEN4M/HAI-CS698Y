@@ -8,13 +8,12 @@ This project predicts Graduate (1) vs Dropout (0) on the UCI "Predict Students�
 
 ## Project Structure
 
-.
-├── student_dropout_fairness.ipynb # EDA → bias audit → models → mitigations → evaluation
-├── data.csv # Dataset (see Data section)
-├── metrics_comparison.csv # Metrics summary saved by the notebook (Section 5)
-├── requirements.txt # Python dependencies
-├── Dockerfile # JupyterLab container for reproducibility
-└── README.md # This file
+- `student_dropout_fairness.ipynb`: EDA, bias audit, models, mitigations, evaluation
+- `data.csv`: Dataset (see Data section)
+- `metrics_comparison.csv`: Metrics summary saved by the notebook
+- `requirements.txt`: Python dependencies
+- `Dockerfile`: JupyterLab container for reproducibility
+- `README.md`: This file
 
 ---
 
@@ -32,15 +31,18 @@ Place the dataset at `data.csv` in the project root (the notebook loads this pat
 
 Create and activate a Python environment, then install dependencies:
 
+```bash
 python -m venv .venv
 
-Windows
+# Windows
 .venv\Scripts\activate
 
-macOS/Linux
+# macOS/Linux
 source .venv/bin/activate
 
 pip install -r requirements.txt
+
+```
 
 Open `student_dropout_fairness.ipynb` and run the cells from top to bottom.
 
