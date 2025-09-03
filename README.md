@@ -50,19 +50,20 @@ Open `student_dropout_fairness.ipynb` and run the cells from top to bottom.
 
 ## Quick Start (Docker)
 
-Build the Docker image:
+```bash
+#Build the Docker image:
 
 docker build -t dropout-fairness .
 
-Run JupyterLab container:
+#Run JupyterLab container:
 
 docker run --rm -it -p 8888:8888 dropout-fairness
 
 Open your browser at [http://localhost:8888/lab](http://localhost:8888/lab) and load `student_dropout_fairness.ipynb`.
 
-To persist outputs and logs during your work (recommended for grading):
 
 docker run --rm -it -p 8888:8888 -v "$PWD":/app dropout-fairness
+```
 
 ---
 
