@@ -98,8 +98,8 @@ docker run --rm -it -p 8888:8888 -v "$PWD":/app dropout-fairness
   - Accuracy, Precision, Recall, F1-Score, ROC-AUC
 
 - **Fairness (Female − Male):**
-  - **SPD (Statistical Parity Difference):** \(P(\hat{y}=1 | \text{Female}) - P(\hat{y}=1 | \text{Male})\) — selection parity
-  - **EOD (Equal Opportunity Difference):** \(TPR*{\text{Female}} - TPR*{\text{Male}}\) — primary metric since graduation is beneficial
+  - **SPD (Statistical Parity Difference):** $P(\hat{y}=1 \mid \text{Female}) - P(\hat{y}=1 \mid \text{Male})$ — selection parity
+  - **EOD (Equal Opportunity Difference):** $TPR_{\text{Female}} - TPR_{\text{Male}}$ — primary metric since graduation is beneficial
 
 _Negative SPD or EOD values indicate worse outcomes for female students._
 
@@ -122,7 +122,6 @@ _Negative SPD or EOD values indicate worse outcomes for female students._
 - **Mitigation A (No-Gender model)** significantly improves fairness with minimal utility loss.
 - **Mitigation B (Reweighting)** achieves the best equal opportunity (lowest EOD) and highest female F1 score, comparable to baseline utility.
 - **Mitigation C (Calibration)** improves probability quality with fairness close to Mitigation A.
-- Oversampling the female group was tested but worsened fairness and was discarded.
 
 The notebook also visualizes confusion matrices, ROC curves, and subgroup tables.
 
@@ -140,6 +139,27 @@ The notebook also visualizes confusion matrices, ROC curves, and subgroup tables
 
 - Dataset from UCI ML Repository: "Predict Students’ Dropout and Academic Success".
 - Fairness framing focuses on Equal Opportunity as graduation is a beneficial outcome.
-- Demonstrates transparent baseline and explainable fairness mitigations that are easy to reproduce.
+
+---
+
+## Contributors
+
+- Tsewang Namgail (241110093)
+
+  - Data exploration and bias evaluation
+  - Implementation of mitigation B (Reweighting) and mitigation C (Calibration) (50%)
+  - Evaluation and results analysis (50%)
+  - README and code documentation
+
+- Sevak Shekokar (241110065)
+
+  - Data exploration and bias evaluation
+  - Implementation of baseline model and mitigation A (Drop Gender) (50%)
+  - Evaluation and results analysis (50%)
+  - Dockerfile and code documentation
+
+Both Tsewang Namgail and Sevak Shekokar has contributed equally across the major components of the project, collaborating on data analysis, modeling, fairness mitigations, evaluation, and documentation.
+
+---
 
 ---
